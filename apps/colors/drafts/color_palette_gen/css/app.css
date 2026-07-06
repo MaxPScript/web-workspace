@@ -1,0 +1,35 @@
+@layer reset, app, flippingcard;
+/* @import "../node_modules/@maxmov/css/reset.css"; */
+/* @layer reset {
+} */
+@layer app {
+	body {
+		background-color: hsl(36, 100%, 90%);
+		padding: 1.5em;
+		/* height: 120%; */
+		/* position: absolute; */
+	}
+	.app {
+		display: grid;
+		grid-template-rows: min-content 1fr min-content;
+		gap: 2em;
+		place-items: center;
+		height: 100%;
+		/* margin: 1.5em; */
+		padding: 1em;
+		border-radius: 1em;
+		background-color: #fad59e;
+		background-color: #fad59e;
+		background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+		/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+		box-shadow: 3px 3px 2px hsl(0 50% 0% / 0.2);
+		perspective: 900px;
+	}
+	.header,
+	.main,
+	.footer {
+		border: 5px dashed hsl(200 50% 50% / 0.2);
+	}
+	flippin-card {
+	}
+}

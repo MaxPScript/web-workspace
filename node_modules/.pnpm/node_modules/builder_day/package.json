@@ -1,0 +1,18 @@
+{
+  "name": "builder_day",
+  "version": "1.0.0",
+  "description": "app having lp by years",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.32.0",
+  "dependencies": {
+    "@maxmov/css": "workspace:*",
+    "@maxmov/assets": "workspace:*"
+  }
+}
