@@ -7,7 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "vite build",
-    "pages": "pnpm build && sleep 5 && gh-pages -d dist"
+    "pages": "pnpm build && gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
