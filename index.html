@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Color Palette Generator</title>
+		<link
+			rel="shortcut icon"
+			href="/color_palette_gen/assets/favicon-BFKXyYms.svg"
+			type="image/x-icon"
+		/>
+		<script type="module" crossorigin src="/color_palette_gen/assets/index-Bs6p03WM.js"></script>
+		<link rel="stylesheet" crossorigin href="/color_palette_gen/assets/index-DB7DHnV_.css">
+	</head>
+	<body>
+		<div class="app">
+			<header class="header">
+				<h1>Немного о цвете и цветовых сочетаниях...</h1>
+				<h3></h3>
+				<p>
+					Двигая ползунки выберите базовый цвет. Затем нажмите кнопку "Готово!".
+				</p>
+			</header>
+			<main class="main">
+				<!-- <div class="main_flip_card_container"> -->
+				<!-- <div class="main_flip_card"></div> -->
+				<flippin-card id="flippin-card_id">
+					<div slot="front">
+						<section class="sliders">
+							<div class="slider slider_red">
+								<div class="slider_label_wrapper">
+									<span>R</span>
+									<span class="slider_label slider_label_red"> </span>
+								</div>
+								<input
+									type="range"
+									id="slider_red_id"
+									min="0"
+									max="255"
+									value="0"
+									step="1"
+								/>
+								<span
+									class="slider_value"
+									id="value_red_id"
+									>0</span
+								>
+							</div>
+							<div class="slider slider_green">
+								<div class="slider_label_wrapper">
+									<span>G</span>
+									<span class="slider_label slider_label_green"></span>
+								</div>
+								<input
+									type="range"
+									id="slider_green_id"
+									min="0"
+									max="255"
+									value="125"
+									step="1"
+								/>
+								<span
+									class="slider_value"
+									id="value_green_id"
+									>125</span
+								>
+							</div>
+							<div class="slider slider_blue">
+								<div class="slider_label_wrapper">
+									<span>B</span>
+									<span class="slider_label slider_label_blue"></span>
+								</div>
+								<input
+									type="range"
+									id="slider_blue_id"
+									min="0"
+									max="255"
+									value="255"
+									step="1"
+								/>
+								<span
+									class="slider_value"
+									id="value_blue_id"
+									>255</span
+								>
+							</div>
+						</section>
+						<button id="front_btn_id">Готово!</button>
+					</div>
+					<div slot="back">
+						<section class="main_back">here will be palettes...</section>
+						<button id="back_btn_id">Готово!</button>
+					</div>
+				</flippin-card>
+				<!-- </div> -->
+			</main>
+			<footer class="footer">
+				<p class="copyright">
+					<span> 2026 © WebDev </span>
+					<!-- <a href="#"> -->
+					<span>
+						<img
+							src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20height='40'%20fill='none'%20viewBox='0%200%2040%2040'%3e%3crect%20width='40'%20height='40'%20fill='%2325D366'%20rx='2'/%3e%3cpath%20fill='%23fff'%20fill-rule='evenodd'%20d='M7.164%2019.887c.003-7.074%205.785-12.828%2012.889-12.828a12.84%2012.84%200%200%201%209.116%203.761%2012.72%2012.72%200%200%201%203.772%209.077c-.003%207.074-5.785%2012.828-12.888%2012.828-2.105%200-4.17-.51-6.018-1.482l-6.453%201.684a.417.417%200%200%201-.508-.514l1.724-6.265a12.76%2012.76%200%200%201-1.634-6.261m12.882%2010.549h-.004c-1.88%200-3.726-.504-5.335-1.454l-.383-.226-3.967%201.035%201.059-3.85-.25-.394a10.37%2010.37%200%200%201-1.602-5.552c.002-5.752%204.705-10.431%2010.487-10.431%202.8%200%205.431%201.087%207.41%203.06a10.34%2010.34%200%200%201%203.067%207.38c-.002%205.752-4.704%2010.432-10.482%2010.432m3.535-8.939c.287.106%201.827.87%202.14%201.028l.172.084c.219.107.366.178.43.284.078.132.078.764-.183%201.502-.262.738-1.514%201.41-2.116%201.501-.54.082-1.223.116-1.973-.125a18%2018%200%200%201-1.786-.665c-2.938-1.278-4.923-4.146-5.298-4.69l-.055-.078-.003-.003c-.166-.223-1.277-1.717-1.277-3.263%200-1.454.71-2.217%201.036-2.568l.06-.066c.288-.316.628-.395.837-.395a12%2012%200%200%201%20.67.012c.183-.001.41-.002.635.54l.345.845c.27.662.569%201.395.621%201.5.079.159.13.343.026.554l-.044.09c-.078.161-.136.28-.27.436l-.159.194a5%205%200%200%201-.31.36c-.157.157-.32.328-.137.644.182.316.811%201.35%201.743%202.187a8.1%208.1%200%200%200%202.312%201.474q.13.056.207.093c.314.159.497.132.68-.079.182-.21.783-.922.992-1.238s.417-.263.705-.158'%20clip-rule='evenodd'/%3e%3c/svg%3e"
+							alt="whatsapp icon"
+						/>
+						sms
+					</span>
+					<span> +7(926)604-66-41 </span>
+					<!-- </a> -->
+				</p>
+			</footer>
+		</div>
+	</body>
+</html>
