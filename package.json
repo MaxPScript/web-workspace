@@ -2,5 +2,8 @@
   "name": "web_workspace",
   "private": true,
   "packageManager": "pnpm@11.9.0",
-  "type": "module"
+  "type": "module",
+  "scripts": {
+    "build:color_palette_gen": "pnpm --filter color_palette_gen build"
+  }
 }

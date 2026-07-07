@@ -1,5 +1,5 @@
 import { defineConfig } from "vite";
 //
 export default defineConfig({
-	base: "/color_palette_gen/",
+	base: "/web-workspace/color_palette_gen/",
 });

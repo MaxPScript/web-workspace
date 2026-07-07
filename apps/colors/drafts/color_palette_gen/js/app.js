@@ -1,5 +1,5 @@
 import "../node_modules/@maxmov/flipping_card/index.js";
-import { generatePalette } from "./helpers/generate_palette.js";
+// import { generatePalette } from "./helpers/generate_palette.js";
 // generatePalette("blue");
 // import "@maxmov/flipping_card";
 //
@@ -40,7 +40,7 @@ btnFront.addEventListener("click", (ev) => {
 	card.flip();
 	//
 	const color = ev.target.style.backgroundColor;
-	generatePalette(color);
+	// generatePalette(color);
 });
 btnBack.addEventListener("click", (ev) => {
 	console.log(card);

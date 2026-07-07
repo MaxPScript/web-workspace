@@ -4,7 +4,6 @@
   "main": "index.js",
   "type": "module",
   "private":true,
-  "packageManager": "pnpm@10.32.0",
   "exports": {
   }
 }
