@@ -36,6 +36,7 @@ jobs:
       - name: Prepare Pages structure
         run: |
           mkdir -p deploy/color_palette_gen
+          cp index.html deploy/
           cp -r apps/colors/drafts/color_palette_gen/dist/* deploy/color_palette_gen/
 
       - name: Deploy to GitHub Pages
