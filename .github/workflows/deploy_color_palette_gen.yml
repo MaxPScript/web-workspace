@@ -33,8 +33,13 @@ jobs:
       - name: Build app
         run: pnpm build:color_palette_gen
 
+      - name: Prepare Pages structure
+        run: |
+          mkdir -p deploy/color_palette_gen
+          cp -r apps/colors/drafts/color_palette_gen/dist/* deploy/color_palette_gen/
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: apps/colors/drafts/color_palette_gen/dist
+          publish_dir: deploy
