@@ -1,0 +1,191 @@
+.header {
+	display: grid;
+}
+.header_slogan {
+	/* font-family: "Oswald", Arial, sans-serif;
+  font-weight: 600;
+  font-family: "Roboto Condensed", Arial, sans-serif;
+  font-weight: 700;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 700; */
+	font-family: "Oswald", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 700;
+	font-style: normal;
+	letter-spacing: 0.05em;
+
+	background: var(--color-accent);
+	background-image: linear-gradient(
+		to right in hsl,
+		hsl(from var(--color-accent) h s l / 0.9),
+		hsl(from var(--color-primary) h s l / 0.9),
+		hsl(from var(--color-accent) h s l / 0.9),
+		hsl(from var(--color-primary) h s l / 0.9),
+		hsl(from var(--color-accent) h s l / 0.9)
+	);
+	padding-block: 0.5em;
+	filter: url(#animatedNoise);
+}
+.header_nav {
+	background: var(--color-primary);
+	border-bottom: 3px solid var(--color-primary-dark);
+	width: fit-content;
+	margin: auto;
+	padding-inline: 0.8em;
+	/* padding: 0 1em; */
+	/* padding-block-end: 3px; */
+
+	/* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); */
+}
+.header_select_container {
+	/* position: absolute; */
+	/* right: 0; */
+	/* bottom: 0; */
+}
+.header_nav_ul {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1em;
+	font-family: "Oswald", Arial, sans-serif;
+	font-weight: 500;
+	letter-spacing: 0.06em;
+	& li {
+		/* display: grid; */
+		padding-block: 0.3em;
+	}
+}
+.header_nav_ul a {
+	display: block;
+	text-decoration: none;
+	color: white;
+	font-weight: 600;
+	font-size: 1em;
+	padding: 0.6em 0.8em;
+	border-radius: 0.4em;
+	transition: 0.2s;
+	text-shadow: 1px 1px hsl(0 50 0 / 0.6);
+}
+/* .header_nav_ul a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+} */
+.header_nav_ul a:hover {
+	background: var(--color-primary-dark);
+	box-shadow: 0px 2px 2px var(--color-accent);
+	/* inset 1px 1px 1px 0px hsl(from var(--color-primary-dark) h s l / 1),
+    inset 2px 1px 1px 0px hsl(from var(--color-primary-dark) h s 80% / 1); */
+	/* border-bottom: 3px solid var(--color-secondary); */
+}
+/* .header_nav_ul a:hover::after {
+  top: 0;
+  height: 100%;
+} */
+.header_nav_ul a:active {
+	transform: translateY(1px);
+	/* background: var(--color-primary-dark); */
+}
+.header_select_container {
+	margin-left: auto;
+	display: flex;
+	align-items: center;
+	gap: 0.5em;
+	color: white;
+	padding-inline: 0.8em;
+	/* background: blueviolet; */
+	/* border: 2px solid var(--color-accent); */
+	border: 2px solid hsl(from var(--color-accent) h s 40% / 1);
+	border-radius: 0.5em;
+}
+.header_select_container label {
+	font-weight: 600;
+}
+.header_select {
+	background: var(--color-bg);
+	border: 1px solid var(--color-border);
+	border-radius: 0.4em;
+	padding: 0.4em 0.5em;
+	font-size: 0.95rem;
+	color: var(--color-text);
+}
+.header_select:hover {
+	border-color: var(--color-primary-dark);
+}
+.header_select:focus {
+	outline: none;
+	border-color: var(--color-accent);
+	box-shadow: 0 0 0 2px hsl(200 60 55 / 0.25);
+}
+/* view transition API */
+::view-transition-group(root) {
+	animation: none;
+}
+::view-transition-old(root),
+::view-transition-new(root) {
+	animation: none;
+}
+/* this to reduce? jugging */
+::view-transition {
+	position: fixed;
+	inset: 0;
+	pointer-events: none;
+}
+/* *** */
+.header_dynamic_content {
+	view-transition-name: headerName;
+	/* contain: layout paint; */
+}
+/* .app,
+.main,
+.footer { */
+/* contain: layout paint; */
+/* } */
+/* this also to reduce? jugging */
+/* ::view-transition-group(headerName) { */
+/* mix-blend-mode: normal; */
+/* animation: none; */
+/* transform: none; */
+/* } */
+/* actual animation */
+/* ::view-transition-old(headerName),
+::view-transition-new(headerName) {
+	animation-duration: 20000ms;
+} */
+::view-transition-old(headerName) {
+	animation: fade-out 300ms ease forwards;
+}
+::view-transition-new(headerName) {
+	animation: fade-in 300ms ease forwards;
+}
+
+@keyframes fade-out {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+/* ::view-transition-old(headerName) {
+	outline: 5px solid red;
+}
+
+::view-transition-new(headerName) {
+	outline: 5px solid blue;
+} */
+.header_marquee {
+	font-size: 1rem;
+}
