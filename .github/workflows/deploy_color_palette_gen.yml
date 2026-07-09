@@ -31,13 +31,17 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Build app
-        run: pnpm build:color_palette_gen
+        run: |
+          pnpm build:color_palette_gen
+          pnpm build:builder_day
 
       - name: Prepare Pages structure
         run: |
           mkdir -p deploy/color_palette_gen
+          mkdir -p deploy/builder_day
           cp index.html deploy/
           cp -r apps/colors/drafts/color_palette_gen/dist/* deploy/color_palette_gen/
+          cp -r apps/builder_day/dist/* deploy/builder_day/
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4

@@ -16,6 +16,10 @@ importers:
       '@maxmov/css':
         specifier: workspace:*
         version: link:../../packages/css
+    devDependencies:
+      vite:
+        specifier: ^8.1.3
+        version: 8.1.3
 
   apps/colors/drafts/color_palette_gen:
     dependencies:

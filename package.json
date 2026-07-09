@@ -4,6 +4,8 @@
   "packageManager": "pnpm@11.9.0",
   "type": "module",
   "scripts": {
-    "build:color_palette_gen": "pnpm --filter color_palette_gen build"
+    "build": "pnpm -r build",
+    "build:color_palette_gen": "pnpm --filter color_palette_gen build",
+    "build:builder_day": "pnpm --filter builder_day build"
   }
 }
