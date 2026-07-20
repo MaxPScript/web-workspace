@@ -1,11 +1,12 @@
 {
   "name": "web_workspace",
   "private": true,
-  "packageManager": "pnpm@11.9.0",
+  "packageManager": "pnpm@11.13.1",
   "type": "module",
   "scripts": {
     "build": "pnpm -r build",
     "build:color_palette_gen": "pnpm --filter color_palette_gen build",
-    "build:builder_day": "pnpm --filter builder_day build"
+    "build:builder_day": "pnpm --filter builder_day build",
+    "prototype_chain_inspector": "pnpm --filter prototype_chain_inspector"
   }
 }

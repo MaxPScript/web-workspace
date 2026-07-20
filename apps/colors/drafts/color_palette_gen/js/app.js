@@ -1,5 +1,5 @@
 import "../node_modules/@maxmov/flipping_card/index.js";
-import { getColorFromComputedStyleMap } from "./helpers/get_color_from_computed_style_map.js";
+import { handleColor } from "./helpers/handle_color.js";
 // import { generatePalette } from "./helpers/generate_palette.js";
 // generatePalette("blue");
 // import "@maxmov/flipping_card";
@@ -31,26 +31,11 @@ sliderBlue.addEventListener("input", updateColor);
 //
 updateColor();
 //
-// function flipCard() {
-// 	const card = document.querySelector(".main");
-// 	card.classList.toggle("is-flipped");
-// }
 const card = document.getElementById("flippin-card_id");
 if (btnFront) {
 	btnFront.addEventListener("click", (ev) => {
-		try {
-			const computedStyles = ev.currentTarget.computedStyleMap();
-			console.log(computedStyles);
-			const { r, g, b } = getColorFromComputedStyleMap(computedStyles);
-			console.log(r, g, b);
-		} catch (error) {
-			console.warn("An error occurred while processing color:", error.message);
-		}
-		// console.log(card);
-		// card.flip();
-		//
-		// const color = ev.target.style.backgroundColor;
-		// generatePalette(color);
+		handleColor(ev.target);
+		card.flip();
 	});
 }
 

@@ -37,6 +37,22 @@ importers:
         specifier: ^8.1.0
         version: 8.1.3
 
+  apps/prototype_chain_inspector:
+    dependencies:
+      '@maxmov/assets':
+        specifier: workspace:*
+        version: link:../../packages/assets
+      '@maxmov/css':
+        specifier: workspace:*
+        version: link:../../packages/css
+      '@maxmov/flipping_card':
+        specifier: workspace:*
+        version: link:../../packages/webcomponents/flipping_card
+    devDependencies:
+      vite:
+        specifier: ^8.1.0
+        version: 8.1.3
+
   packages/assets: {}
 
   packages/css: {}
