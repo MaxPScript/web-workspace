@@ -9,7 +9,7 @@ class FlippinCard extends HTMLElement {
                 :host {
                     display: block;
                     // width: 50px;
-                    // height: 3ch;
+                    height: min-content;
                     perspective: 1000px;
                     border: 5px dashed hsl(120 50 50 / 0.5);
                     // position: relative;

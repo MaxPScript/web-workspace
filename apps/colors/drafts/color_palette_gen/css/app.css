@@ -14,8 +14,9 @@
 		grid-template-rows: min-content 1fr min-content;
 		gap: 2em;
 		place-items: center;
-		max-height: 100%;
-		/* margin: 1.5em; */
+		min-height: stretch;
+		/* max-height: 100%; */
+		/* margin: -1.5em; */
 		padding: 1em;
 		border-radius: 1em;
 		background-color: #fad59e;
@@ -31,5 +32,9 @@
 		border: 5px dashed hsl(200 50% 50% / 0.2);
 	}
 	flippin-card {
+		display: grid;
+		align-content: center;
+		/* overflow: scroll; */
+		height: fit-content;
 	}
 }
