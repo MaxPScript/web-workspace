@@ -16,7 +16,7 @@
                     // height: 100%;
                     // position: relative;
                     transform-style: preserve-3d;
-                    transition: transform 2s ease;
+                    transition: transform 10s ease;
                     display: grid;
                     grid-template-areas: "side";
                     // place-content: center;
@@ -35,7 +35,7 @@
                     height: auto;
                     backface-visibility: hidden;
                     -webkit-backface-visibility: hidden;
-                    transition: height 2s;
+                    transition: height 10s;
                     // overflow: hidden;
 
                 }
