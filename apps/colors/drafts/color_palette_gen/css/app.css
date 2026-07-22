@@ -33,8 +33,11 @@
 	}
 	flippin-card {
 		display: grid;
-		align-content: center;
+		position: relative;
+		/* align-content: center; */
 		/* overflow: scroll; */
-		height: fit-content;
+		/* height: fit-content; */
+		height: 100%;
+		/* place-self: stretch; */
 	}
 }

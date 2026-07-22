@@ -25,6 +25,8 @@
 [slot] {
 	/* display: grid; */
 	/* gap: 1em; */
+	position: absolute;
+	inset: 0;
 }
 /* .main,
 .main_back {

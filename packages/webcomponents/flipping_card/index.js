@@ -20,7 +20,7 @@ class FlippinCard extends HTMLElement {
                     // height: 100%;
                     // position: relative;
                     transform-style: preserve-3d;
-                    transition: transform 2s ease;
+                    transition: transform 10s ease;
                     display: grid;
                     grid-template-areas: "side";
                     // place-content: center;
@@ -39,7 +39,7 @@ class FlippinCard extends HTMLElement {
                     height: auto;
                     backface-visibility: hidden;
                     -webkit-backface-visibility: hidden;
-                    transition: height 2s;
+                    transition: height 10s;
                     // overflow: hidden;
 
                 }
