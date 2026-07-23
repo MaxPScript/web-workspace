@@ -8,40 +8,29 @@ class FlippinCard extends HTMLElement {
 
                 :host {
                     display: block;
-                    // width: 50px;
-                    // height: min-content;
-                    perspective: 1000px;
-                    border: 5px dashed hsl(120 50 50 / 0.5);
-                    // position: relative;
+                    perspective: 500px;
                     interpolate-size: allow-keywords;
                 }
+                :host {
+                    --transition_duration: 1.5s
+                }
                 .card {
-                    // width: 100%;
-                    // height: 100%;
-                    // position: relative;
                     transform-style: preserve-3d;
-                    transition: transform 10s ease;
+                    transition: transform var(--transition_duration) ease-in-out;
                     display: grid;
                     grid-template-areas: "side";
-                    // place-content: center;
                 }
                 .card.is_flipped {
                     transform: rotateY(180deg);
                 }
                 .side ::slotted(*){
-                    // width: 100%;
-                    // height: 100%;
                 }
                 .side {
                     grid-area: side;
-                    // position: absolute;
-                    // width: 100%;
                     height: auto;
                     backface-visibility: hidden;
                     -webkit-backface-visibility: hidden;
-                    transition: height 10s;
-                    // overflow: hidden;
-
+                    transition: height var(--transition_duration) ease-in-out;
                 }
                 .side.is_hidden {
                     height: 0px;

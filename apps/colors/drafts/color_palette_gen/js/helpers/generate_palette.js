@@ -168,7 +168,9 @@ function getUglyColors(count = 3) {
 // Main palette generation function
 export function generatePalette(rgbString) {
 	const rgb = rgbStringToObject(rgbString);
+	// console.log("rgb object:", rgb);
 	const hsl = rgbToHsl(rgb.r, rgb.g, rgb.b);
+	// console.log(hsl);
 
 	// Generate 6 harmony palettes
 	const palettes = [
